@@ -22,6 +22,7 @@ enum
   SLOVAK,
   DUTCH,
   HUNGARIAN,
+  CATALAN,
 
   LANGUAGE_NUM,
 };

@@ -15,6 +15,7 @@
 #include "language_sk.h"
 #include "language_du.h"
 #include "language_hu.h"
+#include "language_ca.h"
 
 //
 // Add new Keywords in Language.inc file Only
@@ -109,6 +110,12 @@ const char *const hu_pack[LABEL_NUM] = {
   #undef  X_WORD
 };
 
+const char *const ca_pack[LABEL_NUM] = {
+  #define X_WORD(NAME) CA_##NAME ,
+  #include "Language.inc"
+  #undef  X_WORD
+};
+
 u8 * textSelect(u8 sel)
 {
   switch(infoSettings.language)
@@ -128,6 +135,7 @@ u8 * textSelect(u8 sel)
     case SLOVAK:      return (u8 *)sk_pack[sel];
     case DUTCH:       return (u8 *)du_pack[sel];
     case HUNGARIAN:   return (u8 *)hu_pack[sel];
+    case CATALAN:     return (u8 *)ca_pack[sel];
 
     default:        return NULL;
   }
