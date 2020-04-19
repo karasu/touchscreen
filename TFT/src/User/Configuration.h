@@ -101,21 +101,21 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 /**
  * Default Touch Mode Language
  *
  * Select the language to display on the LCD while in Touch Mode.
  *
- * Options: ARMENIAN, CHINESE, CZECH, DUTCH, ENGLISH, FRENCH, GERMAN, HUNGARIAN, ITALIAN, JAPANESE, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SPAIN
+ * Options: ARMENIAN, CATALAN, CHINESE, CZECH, DUTCH, ENGLISH, FRENCH, GERMAN, HUNGARIAN, ITALIAN, JAPANESE, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SPANISH
  */
-#define DEFAULT_LANGUAGE ENGLISH
+#define DEFAULT_LANGUAGE CATALAN
 
 /**
  *  Show bootscreen when starting up
  */
-#define SHOW_BTT_BOOTSCREEN
+//#define SHOW_BTT_BOOTSCREEN
 
 /**
  * The duration and frequency for the UI feedback sound.
@@ -125,8 +125,8 @@
  * Note: Test audio output with the G-Code:
  * M300 S<frequency Hz> P<duration ms>
  */
-#define BUZZER_FREQUENCY_DURATION_MS 20 // Default 20
-#define BUZZER_FREQUENCY_HZ 10000       // Default 10000, 20Hz to 60KHz
+#define BUZZER_FREQUENCY_DURATION_MS 0 // Default 20
+#define BUZZER_FREQUENCY_HZ 0       // Default 10000, 20Hz to 60KHz
 #define BUZZER_STOP_LEVEL false
 
 /**
@@ -143,10 +143,10 @@
 #define FAN_NUM      1    // set in 1~6
 
 //                       PLA      PETG       ABS
-#define PREHEAT_BED      {60,      70,       100}
-#define PREHEAT_HOTEND   {200,     250,      230}
+#define PREHEAT_BED      {55,      70,       100}
+#define PREHEAT_HOTEND   {205,     250,      230}
 
-#define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
+#define HEAT_MAX_TEMP    {140,    250,       275,       275,       275,       275,       275}    //max temperature can be set
 #define HEAT_SIGN_ID     {"B:",   "T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:"}
 #define HEAT_DISPLAY_ID  {"Bed",  "T0",      "T1",      "T2",      "T3",      "T4",      "T5"}
 #define HEAT_CMD         {"M140", "M104 T0", "M104 T1", "M104 T2", "M104 T3", "M104 T4", "M104 T5" };
@@ -179,7 +179,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 235
 #define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define Z_MAX_POS 235
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
